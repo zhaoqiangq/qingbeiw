@@ -1,0 +1,278 @@
+@charset "utf-8";
+@import "base.scss";
+//修改密码
+.mypass{
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 220px;
+  .mypassinner{
+    width: 100%;
+    height: 450px;
+    background: #ffff;
+    padding: 45px 157px;
+    box-sizing: border-box;
+   .myjindu{
+     @include clear;
+     li{
+       width: 33.33%;
+       height: 70px;
+       float: left;
+       text-align: center;
+       font-size: 14px;
+       color: #222222;
+       position: relative;
+       &:after{
+          content: "";
+         width: 100%;
+         height: 2px;
+         background: #d8d8d8;
+         position: absolute;
+         top:55px;left: 0;right: 0;
+         margin: auto;
+       }
+       &:before{
+         content: "1";
+         width: 18px;
+         height: 18px;
+         background: #d8d8d8;
+         border-radius: 3px;
+         text-align: center;
+         line-height: 18px;
+         position: absolute;
+         top:45px;left: 0;right: 0;
+         margin: auto;
+         color: #fff;
+         z-index: 8;
+       }
+       &:nth-child(2){
+         &:before{
+           content: "2";
+         }
+       }
+       &:nth-child(3){
+         &:before{
+           content: "3";
+         }
+       }
+       &.active{
+         color: #00cc7b;
+         &:after{
+           background: #00cc7b;
+         }
+         &:before{
+           background: #00cc7b;
+         }
+       }
+     }
+   }
+    .form{
+      width: 100%;
+      margin-top: 30px;
+      li{
+        display: none;
+        text-align: center;
+        font-size: 14px;
+        color: #222222;
+        &.active{
+          display: block;
+        }
+        input{
+          width: 260px;
+          height: 41px;
+          background-color: #ffffff;
+          border: solid 1px #d8d8d8;
+          outline: none;
+          padding-left: 10px;
+        }
+        .next{
+          width: 91px;
+          height: 28px;
+          background-color: #d8d8d8;
+          border-radius: 2px;
+          text-align: center;
+          line-height: 28px;
+          font-size: 14px;
+          color: #fff;
+          margin: 0 auto;
+          margin-top: 120px;
+          cursor: pointer;
+        }
+        input[type="button"]{
+          width: 101px;
+          height: 41px;
+          background-color: #ffffff;
+          border-radius: 1px;
+        }
+        img{
+          margin-top: 50px;
+        }
+        h6{
+          font-size: 16px;
+          color: #222222;
+          line-height: 60px;
+        }
+        span{
+          color: #d8d8d8;
+        }
+      }
+    }
+  }
+}
+.title{
+  font-size: 14px;
+  color: #93979c;
+  line-height: 50px;
+  a{
+    color: #626569;
+  }
+}
+//我的
+.my{
+  width: 1000px;
+  margin: 0 auto;
+  .myinner{
+    width: 100%;
+    margin-top: 30px;
+    @include clear;
+    .mynav{
+      width: 190px;
+      height: 500px;
+      background: #ffffff;
+      float: left;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      li{
+        width: 100%;
+        height: 31px;
+        margin-top: 15px;
+        position: relative;
+        &.active{
+          &:after{
+            content: "";
+            width: 3px;
+            height: 16px;
+            background-color: #00cc7b;
+            position: absolute;
+            left: 20px;top:0;bottom: 0;
+            margin: auto;
+          }
+          a{
+            color: #00cc7b;
+          }
+        }
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          font-size: 14px;
+          line-height: 31px;
+          color:#333;
+          text-align: center;
+          &:hover{
+            color: #00cc7b;
+          }
+        }
+      }
+    }
+    .myright{
+      width: 800px;
+      background: #fff;
+      float: right;
+      padding: 50px;
+      box-sizing: border-box;
+      @include clear;
+      .myr{
+        width: 130px;
+        font-size: 12px;
+        float: left;
+        color: #999;
+        text-align: center;
+        p{
+          margin-top: 30px;
+        }
+        .file{
+          width: 80px;
+          height: 25px;
+          background-color: #ffffff;
+          border-radius: 12px;
+          border: solid 1px #f65d22;
+          font-size: 14px;
+          color: #f65d22;
+          line-height: 25px;
+          text-align: center;
+          position: relative;
+          margin: 30px auto;
+          input{
+            position: absolute;
+            @include tlbr;
+            opacity: 0;
+          }
+        }
+      }
+      .myl{
+        width: 450px;
+        float: left;
+        margin-left: 50px;
+        font-size: 14px;
+        color: #999999;
+        p{
+          line-height: 50px;
+        }
+        .input{
+          height: 40px;
+          line-height: 40px;
+          input[type="text"]{
+            width: 210px;
+            height: 35px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            border: solid 1px #e2e2e2;
+            outline: none;
+          }
+          i{
+            font-style: normal;
+            font-size: 12px;
+            color: #f65d22;
+          }
+          .radio{
+            position: relative;
+            margin-right:10px ;
+            input{
+              position: absolute;
+              @include tlbr;
+              opacity: 0;
+              width: 100%;
+              height: 100%;
+            }
+            label{
+              display: inline-block;
+              width: 43px;
+              height: 40px;
+              background: url(../images/my3.png)no-repeat;
+              background-position: left center;
+              text-align: right;
+            }
+            input:checked + label{
+              background: url(../images/my4.png)no-repeat;
+              background-position: left center;
+            }
+          }
+        }
+        input[type="submit"]{
+          width: 90px;
+          height: 28px;
+          background-color: #d8d8d8;
+          border-radius: 2px;
+          color: #fff;
+          text-align: center;
+          line-height: 28px;
+          font-size: 13px;
+          border: none;
+          margin-top: 20px;
+          cursor: pointer;
+          outline: none;
+        }
+      }
+    }
+  }
+}
